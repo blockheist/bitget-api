@@ -520,6 +520,11 @@ export class RestClientV2 extends BaseRestClient {
     return this.postPrivate(`/api/v2/mix/order/cancel-order`, params);
   }
 
+  futuresCancelAllOrders(params: object): Promise<APIResponse<any>> {
+    return this.postPrivate(`/api/v2/mix/order/cancel-all-orders`, params);
+  }
+
+
   futuresSubmitReversal(params: object): Promise<APIResponse<any>> {
     return this.postPrivate(`/api/v2/mix/order/click-backhand`, params);
   }
